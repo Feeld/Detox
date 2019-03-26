@@ -234,7 +234,10 @@ public class ReactNativeSupport {
     }
 
     private static void removeEspressoIdlingResources(ReactContext reactContext) {
-
+        if(reactContext == null) {
+            return;
+        }
+        
         Log.i(LOG_TAG, "Removing Espresso IdlingResources for React Native.");
 
         IdlingRegistry.getInstance().unregister(rnTimerIdlingResource);
@@ -310,6 +313,8 @@ public class ReactNativeSupport {
     }
 
     public static void resumeRNTimersIdlingResource() {
-        rnTimerIdlingResource.resume();
+        if (rnTimerIdlingResource != null) {
+            rnTimerIdlingResource.resume();
+        }
     }
 }

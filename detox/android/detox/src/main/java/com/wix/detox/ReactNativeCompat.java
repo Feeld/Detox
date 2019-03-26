@@ -30,7 +30,7 @@ public class ReactNativeCompat {
 
     public static void waitForReactNativeLoad(Context reactNativeHostHolder) {
         if (getMinor() >= 50) {
-            ReactNativeSupport.waitForReactNativeLoad(reactNativeHostHolder);
+            // ReactNativeSupport.waitForReactNativeLoad(reactNativeHostHolder);
             try {
                 //TODO- Temp hack to make Detox usable for RN>=50 till we find a better sync solution.
                 Thread.sleep(1000);
