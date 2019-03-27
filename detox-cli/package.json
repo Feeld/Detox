@@ -1,5 +1,5 @@
 {
-  "name": "detox-cli",
+  "name": "@feeld/detox-cli",
   "version": "1.0.1",
   "description": "detox CLI tool wrapper",
   "main": "index.js",
